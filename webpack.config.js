@@ -1,27 +1,27 @@
 const { resolve } = require('path')
 
 const config = {
-    mode: 'production',
+    mode: "production",
     module: {
         rules: [
             {
-                test: /\.ts$/,
+                test: /\.tsx?$/,
                 use: 'ts-loader',
-                exclude: resolve(__dirname, 'node_modules')
+                exclude: /node_modules/
             }
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.tsx', '.ts', '.js']
     },
     watchOptions: {
-        poll: 1000
+        ignored: /node_modules/
     }
 }
 
 const entries = [
     {
-        entry: resolve(__dirname, 'src', 'main', 'main.ts'),
+        entry: './src/main/main.ts',
         target: 'electron-main',
         output: {
             filename: 'main.js',
@@ -29,7 +29,7 @@ const entries = [
         }
     },
     {
-        entry: resolve(__dirname, 'src', 'renderer', 'renderer.ts'),
+        entry: './src/renderer/renderer.ts',
         target: 'electron-renderer',
         output: {
             filename: 'renderer.js',

@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/main.js",
   "scripts": {
-    "webpack": "rimraf dist && webpack --progress",
+    "pack": "rimraf dist && webpack --progress",
     "watch": "rimraf dist && webpack --progress --watch",
     "build": "rimraf dist && webpack --progress && electron-builder -wl",
     "start": "electron ."
