@@ -5,7 +5,14 @@ You can jump start your Electron project with this template.
 # Installation
 
 ```bash
-git clone https://github.com/cbenriquez/electron-webpack-typescript-template
+# Clone the repository into the current directory.
+git clone https://github.com/cbenriquez/electron-webpack-typescript-template .
+
+# Install all node.js dependencies.
+npm install
+
+# Erase git information.
+npx rimraf .git
 ```
 
 # Packages

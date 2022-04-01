@@ -1,7 +1,7 @@
 const { resolve } = require('path')
 
 const config = {
-    mode: "production",
+    mode: 'production',
     module: {
         rules: [
             {
